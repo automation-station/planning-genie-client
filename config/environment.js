@@ -3,7 +3,7 @@
 module.exports = function (environment) {
   'use strict';
   const ENV = {
-    modulePrefix: 'ga-wdi-boston.ember-auth',
+    modulePrefix: 'ga-wdi-boston.planning-genie-client',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',

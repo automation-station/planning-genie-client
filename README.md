@@ -23,7 +23,7 @@ By the end of this, developers should be able to:
     this repository.
 1.  Install dependencies with `npm install` and `bower install`.
 1.  Start any API based on a recent version of the [Rails API
-    Template](https://github.com/ga-wdi-boston/rails-api-template) or the
+    Template](https://github.com/ga-wdi-boston/planning-genie-api) or the
     [Express API
     Template](https://github.com/ga-wdi-boston/express-api-template).
 1.  Start the front-end server with `ember server`.
