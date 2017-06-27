@@ -1,0 +1,7 @@
+{{#each model as |profile|}}
+  <li>
+    {{profile.givenName}} {{profile.familyName}}
+    Profile Photo is: {{profile.photoUrl}}
+    Preference is: {{profile.preferences}}
+  </li>
+{{/each}}
