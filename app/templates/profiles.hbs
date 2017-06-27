@@ -3,5 +3,10 @@
     {{profile.givenName}} {{profile.familyName}}
     Profile Photo is: {{profile.photoUrl}}
     Preference is: {{profile.preferences}}
+    {{#link-to 'profile' profile}}
+      <button class="btn btn-xs btn-default">
+        Profile
+      </button>
+    {{/link-to}}
   </li>
 {{/each}}
