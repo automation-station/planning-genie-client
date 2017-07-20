@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-    editMaterial (material) {
-      this.sendAction('editMaterial', material)
+    edit () {
+      this.sendAction('edit', this.get('material'))
     }
   }
 });

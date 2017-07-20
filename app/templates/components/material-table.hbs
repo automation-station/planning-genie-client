@@ -1,5 +1,6 @@
 <ul>
   {{#each materials as |material|}}
-    <li>{{material.name}}</li>
+    {{material-row material=material
+                   edit='editMaterial'}}
   {{/each}}
 </ul>
