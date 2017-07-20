@@ -4,6 +4,9 @@ export default Ember.Component.extend({
   actions: {
     edit () {
       this.sendAction('edit', this.get('material'))
+    },
+    delete () {
+      this.sendAction('delete', this.get('material'))
     }
   }
 });

@@ -7,6 +7,9 @@ export default Ember.Route.extend({
   actions: {
     editMaterial (material) {
       console.log('inside route, material is', material);
-    }
+    },
+    deleteMaterial (material) {
+      console.log('inside deleteMaterial action, materials route, material is', material);
+    },
   }
 });
