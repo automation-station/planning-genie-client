@@ -1,0 +1,12 @@
+<label for="given-name">Given Name</label>
+{{input id="given-name"
+        placeholder="Given Name"
+        value=profile.givenName}}
+
+<button type="submit" class="btn btn-primary" {{action "submit"}}>
+  Save
+</button>
+
+<button class="btn btn-default" {{action "reset"}}>
+  Cancel
+</button>

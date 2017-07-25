@@ -9,7 +9,8 @@ export default Ember.Route.extend({
       this.get('auth').signUp(credentials)
         .then(() => this.get('auth').signIn(credentials))
         .then(() => {
-          return this.get('store').findRecord('user', this.get('auth.credentials.id'))
+          return this.get('store')
+            .findRecord('user', this.get('auth.credentials.id'))
         })
         .then((user) => this.get('store').createRecord('profile', { user }))
         .then((profile) => profile.save())
