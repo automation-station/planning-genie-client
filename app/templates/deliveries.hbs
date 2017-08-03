@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-sm-2">
+    Name
+  </div>
+  <div class="col-sm-2">
+    Cohort
+  </div>
+  <div class="col-sm-2">
+    Instructor
+  </div>
+  <div class="col-sm-2">
+    Date and Time
+  </div>
+  <div class="col-sm-2">
+    Units
+  </div>
+  <div class="col-sm-2">
+    Status
+  </div>
+</div>
+
+<hr>
+
+{{#each model as |delivery|}}
+  {{delivery-row delivery=delivery}}
+{{/each}}
