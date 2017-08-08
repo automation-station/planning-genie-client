@@ -2,18 +2,24 @@
   <div class="col-sm-3">
     {{delivery.material.name}}
   </div>
+
   <div class="col-sm-2">
     {{delivery.cohort}}
   </div>
+
   <div class="col-sm-2">
-    {{delivery.user.email}}
+      {{delivery.user.email}}
+      {{input enter='assignInstructor' value=assignedInstructor type='text' placeholder='Instructor ID'}}
   </div>
+
   <div class="col-sm-2">
     {{delivery.dueDate}}
   </div>
+
   <div class="col-sm-2">
     Coming soon
   </div>
+
   <div class="col-sm-1">
     {{delivery.status}}
   </div>

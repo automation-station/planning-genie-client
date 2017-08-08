@@ -21,6 +21,6 @@
 
 <hr>
 
-{{#each model as |delivery|}}
-  {{delivery-row delivery=delivery}}
+{{#each model.deliveries as |delivery|}}
+  {{delivery-row assignInstructor='assignInstructor' delivery=delivery users=model.users}}
 {{/each}}

@@ -4,6 +4,6 @@ export default DS.Model.extend({
    dueDate: DS.attr('date'),
    status: DS.attr('string'),
    cohort: DS.attr('string'),
-   userId: DS.attr('number'),
+   user: DS.belongsTo('user'),
    material: DS.belongsTo('material')
 });
