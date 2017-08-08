@@ -5,9 +5,12 @@
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
+          <li {{action "myProfile"}}>
+            <a href="">Dashboard</a>
+          </li>
           <li>
-            {{#link-to "profiles"}}
-              Profiles
+            {{#link-to "deliveries"}}
+              Deliveries
             {{/link-to}}
           </li>
           <li>

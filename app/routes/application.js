@@ -17,6 +17,10 @@ export default Ember.Route.extend({
           .danger('There was a problem. Are you sure you\'re signed-in?');
         });
     },
+    myProfile (profileId) {
+      this.get('store').findRecord('profile', profileId)
+        .then(profile => this.transitionTo('profile', profile))
+    },
 
     error (reason) {
       let unauthorized = reason.errors && reason.errors.some((error) =>
