@@ -1,1 +1,16 @@
-{{outlet}}
+{{model.givenName}}
+{{model.familyName}}
+{{model.photoUrl}}
+{{model.preferences}}
+
+{{#link-to 'profiles'}}
+  <button class="btn btn-xs btn-default">
+    All Profiles
+  </button>
+{{/link-to}}
+
+{{#link-to 'profile.edit' model}}
+  <button class="btn btn-xs btn-default">
+    Edit Profile
+  </button>
+{{/link-to}}

@@ -10,13 +10,13 @@ Router.map(function () {
   this.route('sign-in');
   this.route('change-password');
   this.route('users');
-  this.route('dashboard');
   this.route('deliveries');
   this.route('materials');
   this.route('profile', { path: '/profiles/:profile_id' }, function() {
     this.route('edit');
   });
   this.route('profiles');
+  this.route('dashboard');
 });
 
 export default Router;

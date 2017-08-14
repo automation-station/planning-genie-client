@@ -9,12 +9,12 @@ export default Ember.Route.extend({
   },
   actions: {
     assignInstructor: function(instructorId, deliveryId) {
-        let user = this.get('store').peekRecord('user', instructorId)
-        let delivery = this.get('store').peekRecord('delivery', deliveryId)
-        delivery.set('user', user);
-        delivery.set('status', 'not prepped')
-        return delivery.save()
-          .catch(console.log)
+      let user = this.get('store').peekRecord('user', instructorId)
+      let delivery = this.get('store').peekRecord('delivery', deliveryId)
+      delivery.set('user', user);
+      delivery.set('status', 'not prepped')
+      return delivery.save()
+        .catch(console.log)
     }
   }
 });

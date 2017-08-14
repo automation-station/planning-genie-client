@@ -26,6 +26,7 @@ export default Ember.Route.extend({
       let unauthorized = reason.errors && reason.errors.some((error) =>
         error.status === '401'
       );
+      console.log('error is ', reason);
 
       if (unauthorized) {
         this.get('flashMessages')
