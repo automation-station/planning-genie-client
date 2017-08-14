@@ -5,5 +5,5 @@ export default DS.Model.extend({
   familyName: DS.attr('string'),
   photoUrl: DS.attr('string'),
   preferences: DS.attr('string'),
-  user: DS.belongsTo('user'),
+  user: DS.belongsTo('user')
 });
