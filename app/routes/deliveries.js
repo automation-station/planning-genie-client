@@ -8,7 +8,7 @@ export default Ember.Route.extend({
     }
   },
   actions: {
-    assignInstructor: function(instructorId, deliveryId) {
+    assignInstructor (instructorId, deliveryId) {
       let user = this.get('store').peekRecord('user', instructorId)
       let delivery = this.get('store').peekRecord('delivery', deliveryId)
       delivery.set('user', user);
