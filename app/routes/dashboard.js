@@ -12,7 +12,10 @@ export default Ember.Route.extend({
     }
   },
   model () {
-    return this.get('store').findRecord('profile', this.get('profile'))
+    return Ember.RSVP.hash({
+      profile: this.get('store').findRecord('profile', this.get('profile')),
+      deliveries: this.get('store').findAll('delivery')
+    })
   },
 
   actions: {
