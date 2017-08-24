@@ -5,5 +5,6 @@ export default DS.Model.extend({
    status: DS.attr('string'),
    cohort: DS.attr('string'),
    user: DS.belongsTo('user'),
-   material: DS.belongsTo('material')
+   material: DS.belongsTo('material'),
+   upcoming: DS.attr('boolean')
 });
