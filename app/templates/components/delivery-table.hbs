@@ -1,7 +1,20 @@
+Feature coming soon! <form id="display-options" value=preferences.show>
+  <div class="radio-group">
+    <input type="radio" id="option-one" name="selector" value='future'>
+    <label for="option-one"> Future</label>
+    <input type="radio" id="option-two" name="selector" value='all'>
+    <label for="option-two"> All</label>
+  </div>
+</form>
+
+<hr>
+
 {{delivery-table-headers}}
 
 <hr>
 
 {{#each deliveries as |delivery|}}
-  {{delivery-row assignInstructor='assignInstructor' delivery=delivery}}
+  {{#if delivery.upcoming}}
+    {{delivery-row assignInstructor='assignInstructor' delivery=delivery}}
+  {{/if}}
 {{/each}}
