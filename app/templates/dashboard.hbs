@@ -1,7 +1,7 @@
-{{model.profile.givenName}}
-{{model.profile.familyName}}
-{{model.profile.photoUrl}}
-{{model.profile.preferences}}
+{{model.givenName}}
+{{model.familyName}}
+{{model.photoUrl}}
+{{model.preferences}}
 
 {{#link-to 'profiles'}}
   <button class="btn btn-xs btn-default">
@@ -17,4 +17,4 @@
 
 <hr>
 
-{{delivery-table deliveries=model.deliveries}}
+{{delivery-table deliveries=model.user.deliveries}}
