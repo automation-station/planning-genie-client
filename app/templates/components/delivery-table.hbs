@@ -1,0 +1,25 @@
+Feature coming soon! <form id="display-options" value=preferences.show>
+  <div class="radio-group">
+    {{#if preferences.viewAll}}
+      {{radio-button value='View Upcoming' id='option-one' label='future' toggle='toggleView'}}
+    {{else}}
+      {{radio-button value='View All' id='option-two' label='all' toggle='toggleView'}}
+    {{/if}}
+  </div>
+</form>
+
+<hr>
+
+{{delivery-table-headers}}
+
+<hr>
+
+{{#each deliveries as |delivery|}}
+  {{#if preferences.viewAll}}
+    {{delivery-row assignInstructor='assignInstructor' delivery=delivery}}
+  {{else}}
+    {{#if delivery.upcoming}}
+      {{delivery-row assignInstructor='assignInstructor' delivery=delivery}}
+    {{/if}}
+  {{/if}}
+{{/each}}

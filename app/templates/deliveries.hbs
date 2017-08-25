@@ -1,26 +1,2 @@
-<div class="row">
-  <div class="col-sm-3">
-    Name
-  </div>
-  <div class="col-sm-2">
-    Cohort
-  </div>
-  <div class="col-sm-2">
-    Instructor
-  </div>
-  <div class="col-sm-2">
-    Date and Time
-  </div>
-  <div class="col-sm-2">
-    Units
-  </div>
-  <div class="col-sm-1">
-    Status
-  </div>
-</div>
-
-<hr>
-
-{{#each model.deliveries as |delivery|}}
-  {{delivery-row assignInstructor='assignInstructor' delivery=delivery users=model.users}}
-{{/each}}
+{{delivery-table deliveries=model
+                 assignInstructor='assignInstructor'}}

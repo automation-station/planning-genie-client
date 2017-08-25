@@ -2,13 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model () {
-    return {
-      deliveries: this.get('store').findAll('delivery'),
-      users: this.get('store').findAll('user')
-    }
+    return this.get('store').findAll('delivery')
   },
+
   actions: {
-    assignInstructor: function(instructorId, deliveryId) {
+    assignInstructor (instructorId, deliveryId) {
       let user = this.get('store').peekRecord('user', instructorId)
       let delivery = this.get('store').peekRecord('delivery', deliveryId)
       delivery.set('user', user);

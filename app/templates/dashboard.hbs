@@ -9,8 +9,12 @@
   </button>
 {{/link-to}}
 
-{{#link-to 'profile.edit' model}}
+{{#link-to 'profile.edit' model.profile}}
   <button class="btn btn-xs btn-default">
     Edit Profile
   </button>
 {{/link-to}}
+
+<hr>
+
+{{delivery-table deliveries=model.user.deliveries}}
