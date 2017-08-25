@@ -1,9 +1,10 @@
 Feature coming soon! <form id="display-options" value=preferences.show>
   <div class="radio-group">
-    <input type="radio" id="option-one" name="selector" value='future'>
-    <label for="option-one"> Future</label>
-    <input type="radio" id="option-two" name="selector" value='all'>
-    <label for="option-two"> All</label>
+    {{#if preferences.viewAll}}
+      {{radio-button value='View Upcoming' id='option-one' label='future' toggle='toggleView'}}
+    {{else}}
+      {{radio-button value='View All' id='option-two' label='all' toggle='toggleView'}}
+    {{/if}}
   </div>
 </form>
 
@@ -14,7 +15,11 @@ Feature coming soon! <form id="display-options" value=preferences.show>
 <hr>
 
 {{#each deliveries as |delivery|}}
-  {{#if delivery.upcoming}}
+  {{#if preferences.viewAll}}
     {{delivery-row assignInstructor='assignInstructor' delivery=delivery}}
+  {{else}}
+    {{#if delivery.upcoming}}
+      {{delivery-row assignInstructor='assignInstructor' delivery=delivery}}
+    {{/if}}
   {{/if}}
 {{/each}}
