@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   'use strict';
-  const ENV = {
+  var ENV = {
     modulePrefix: 'wdi-bos-faculty.planning-genie-client',
     environment: environment,
     rootURL: '/',
@@ -38,7 +38,7 @@ module.exports = function (environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.rootUrl = '/';
+    ENV.rootURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
@@ -49,7 +49,9 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
+    ENV.rootURL = '/planning-genie-client';
     ENV.locationType = 'hash';
+    ENV.apiHost = 'https://murmuring-ocean-51383.herokuapp.com';
   }
 
   return ENV;
