@@ -1,4 +1,4 @@
-import ENV from 'ga-wdi-boston.planning-genie-client/config/environment';
+import ENV from 'wdi-bos-faculty.planning-genie-client/config/environment';
 import ActiveModelAdapter from 'active-model-adapter';
 
 import Ember from 'ember';

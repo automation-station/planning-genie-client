@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import AjaxService from 'ember-ajax/services/ajax';
 
-import ENV from 'ga-wdi-boston.planning-genie-client/config/environment';
+import ENV from 'wdi-bos-faculty.planning-genie-client/config/environment';
 
 export default AjaxService.extend({
   host: ENV.apiHost,
