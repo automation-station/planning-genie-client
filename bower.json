@@ -1,5 +1,5 @@
 {
-  "name": "wdi-bos-faculty.planning-genie-client",
+  "name": "planning-genie-client",
   "dependencies": {
     "ember": "~2.10.1",
     "ember-cli-shims": "0.1.3",
