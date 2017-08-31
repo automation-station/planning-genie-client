@@ -12,13 +12,12 @@ export default Ember.Route.extend({
               this.get('store').findRecord('user', instructorId),
         delivery: this.get('store').peekRecord('delivery', deliveryId)
       })
-      .then((data) => {
-        console.log('data is ', data)
-        const delivery = data.delivery
-        delivery.set('user', data.user)
-        return delivery.save()
-      })
-      .catch(console.error)
+        .then((data) => {
+          const delivery = data.delivery
+          delivery.set('user', data.user)
+          return delivery.save()
+        })
+        .catch(console.error)
     }
   }
 });
