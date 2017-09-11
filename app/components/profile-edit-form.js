@@ -10,6 +10,7 @@ export default Ember.Component.extend({
     },
 
     reset () {
+      this.sendAction('cancel');
       this.set('credentials', {});
     },
   },

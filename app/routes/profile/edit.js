@@ -6,6 +6,9 @@ export default Ember.Route.extend({
       profile.save()
         .then((profile) => this.transitionTo('profile', profile))
         .catch(console.error)
+    },
+    cancel () {
+      this.transitionTo('dashboard')
     }
   }
 });
