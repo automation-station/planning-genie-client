@@ -1,5 +1,4 @@
-{{model.givenName}}
-{{model.familyName}}
-{{model.photoUrl}}
-{{model.preferences}}
-{{profile-edit-form profile=model submit='saveProfile'}}
+<h3>Update Profile info:</h3>
+{{profile-edit-form profile=model
+                    submit='saveProfile'
+                    cancel='cancel'}}

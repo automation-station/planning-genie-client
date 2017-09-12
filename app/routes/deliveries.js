@@ -2,7 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model () {
-    return this.get('store').findAll('delivery')
+    return Ember.RSVP.hash({
+      profiles: this.get('store').findAll('profile'),
+      deliveries: this.get('store').findAll('delivery'),
+    });
   },
 
   actions: {
@@ -12,13 +15,12 @@ export default Ember.Route.extend({
               this.get('store').findRecord('user', instructorId),
         delivery: this.get('store').peekRecord('delivery', deliveryId)
       })
-      .then((data) => {
-        console.log('data is ', data)
-        const delivery = data.delivery
-        delivery.set('user', data.user)
-        return delivery.save()
-      })
-      .catch(console.error)
+        .then((data) => {
+          const delivery = data.delivery
+          delivery.set('user', data.user)
+          return delivery.save()
+        })
+        .catch(console.error)
     }
   }
 });

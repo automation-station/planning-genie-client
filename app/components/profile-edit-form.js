@@ -10,7 +10,9 @@ export default Ember.Component.extend({
     },
 
     reset () {
-      this.set('credentials', {});
+      this.sendAction('cancel');
+      // reset the profile back to what it was before
+      // this.set('profile', this.get('profile'));
     },
   },
 });

@@ -2,6 +2,18 @@
 {{input id="given-name"
         placeholder="Given Name"
         value=profile.givenName}}
+<label for="family-name">Family Name</label>
+{{input id="family-name"
+        placeholder="Family Name"
+        value=profile.familyName}}
+<label for="photoUrl">Photo URL</label>
+{{input id="photoUrl"
+        placeholder="Photo URL"
+        value=profile.photoUrl}}
+<label for="preferences">Preferences</label>
+{{input id="preferences"
+        placeholder="Preferences"
+        value=profile.preferences}}
 
 <button type="submit" class="btn btn-primary" {{action "submit"}}>
   Save

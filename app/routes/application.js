@@ -30,11 +30,11 @@ export default Ember.Route.extend({
 
       if (unauthorized) {
         this.get('flashMessages')
-        .danger('You must be authenticated to access this page.');
+          .danger('You must be authenticated to access this page.');
         this.transitionTo('/sign-in');
       } else {
         this.get('flashMessages')
-        .danger('There was a problem. Please try again.');
+          .danger('There was a problem. Please try again.');
       }
 
       return false;
